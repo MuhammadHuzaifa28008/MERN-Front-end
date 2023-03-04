@@ -1,0 +1,135 @@
+.blue {
+  color: #595bd4;
+}
+.profileCard {
+    overflow: hidden;
+  width: 50%;
+  height: auto;
+  margin: auto;
+  padding: 2em;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 2em;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+
+  box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
+}
+.profileCard div{
+    border-radius: 5px;
+    border-bottom: 5px;
+    border-radius: 1em;
+    box-shadow: 5px 5px #595bd4;
+
+}
+.nameContainer {
+    position: relative;
+  box-sizing: border-box;
+  background: transparent;
+  border: 1px solid #595bd4;
+  width: 100%;
+  height: 30%;
+  text-align: center;
+  margin: 1em;
+  padding: 1em;
+  box-shadow: 5px ;
+  overflow: hidden;
+
+  box-shadow: 5px 5px #595bd4;
+}
+.nameContainer p{
+    font-weight: bolder;
+    font-size: 2em;
+
+}
+.emailContainer{
+    box-sizing: border-box;
+    background: transparent;
+    border: 1px solid #595bd4;
+    width: 100%;
+    height: 20%;
+    margin: 1em;
+    padding: 1em;
+    position: relative;
+    border-bottom: 5px;
+    border-radius: 1em;
+    box-shadow: 5px 5px #595bd4;
+}
+.passwordContainer{
+    position: relative;
+    box-sizing: border-box;
+    background: transparent;
+    border: 1px solid #595bd4;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin: 1em;
+        padding-top: 25px;
+    box-shadow: 5px;
+    overflow: hidden;
+  
+    box-shadow: 5px 5px #595bd4;
+}
+
+.userAction{
+    box-sizing: border-box;
+    width: 2em;
+    height: 2em;
+    padding: 5px;
+    display: flex;
+    position: absolute;
+    right: 4px;
+    bottom: 5px;
+    margin: 3px;
+    box-shadow: 3px 3px 5px 5px #00000017;
+    border-radius: 5px;
+}
+.userAction:hover{
+    cursor: pointer;
+    box-shadow: 1px 2px 4px 4px #00000029;
+
+}
+
+.pencil{
+    box-sizing: border-box;
+    border: 1px black;
+    width: 1em;
+    height: 1em;
+    margin:5px;
+}
+
+#updateForm{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    width: 70%;
+    margin: auto;
+    
+}
+
+#actDel{
+    background-color: rgb(237 67 55 / 37%);
+    color:#595bd4;
+    width: 100%;
+    margin-top: 3em;
+}
+#actDel:hover{
+    background-color: rgb(255 17 0 / 75%);
+    color: #0003a7;
+}
+
+#updateContainer{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+}
+.updateBtns{
+    width: 10em;
+    height: 3em;
+    padding: 5px;
+}

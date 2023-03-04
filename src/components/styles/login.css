@@ -1,0 +1,132 @@
+.loginCard {
+  width: 18em;
+  padding: 2em;
+  /* height: 66%; */
+  border-radius: 3em;
+  display: flex;
+  /* box-sizing: border-box; */
+  margin: 3em auto;
+  /* margin-top: 1em; */
+  flex-direction: column;
+  box-shadow: 5px 5px 5px 5px #dadada;
+  /* color: inherit; */
+  /* text-align: center; */
+  /* justify-content: space-between; */
+  align-items: center;
+  background-color: white;
+}
+.successfullLogin{
+  width: 18em;
+  padding: 2em;
+  height: 66%;
+  border-radius: 3em;
+  display: flex;
+  box-sizing: border-box;
+  margin: 3em auto;
+  /* margin-top: 1em; */
+  flex-direction: column;
+  box-shadow: 5px 5px 5px 5px #91e71f;
+  color: inherit;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+}
+ 
+.logInGreetings {
+  color:#595bd4;
+  font-weight: bold;
+  font-size: 3em;
+  background-color: inherit;
+}
+
+.logInForm {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  padding: 1em;
+  flex-direction: column;
+  background-color: inherit;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.loginInputs {
+  border: none;
+    margin: 5px;
+    padding: 5px;
+    padding-left: 10px;
+    border-radius: 11px;
+    width: 15em;
+    background: #ffffff;
+}
+.loginInputs:focus {
+  outline: none;
+  box-shadow: none;
+  background: rgb(255, 255, 255);
+  color: none;
+}
+
+.logInForm button {
+  width: 50%;
+  background-color: #595bd4;
+  color: white;
+}
+
+.inputsLabel {
+  display: inline-flex;
+  background-color: white;
+  background: transparent;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  padding-left: 3px;
+  margin-bottom: 1em;
+  box-shadow: -1px 1px 0px 2px #dadada;
+}
+.error{
+  display: inline-flex;
+  background-color: white;
+  margin-bottom: 1em;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  padding-left: 3px;
+  position: relative;
+  box-sizing: border-box;
+      animation: shake 0.2s ease-in-out 0s 2;
+      box-shadow: 0 0 0.5em red;
+}
+
+@keyframes shake {
+  0% { margin-left: 0rem; }
+  25% { margin-left: 0.5rem; }
+  75% { margin-left: -0.5rem; }
+  100% { margin-left: 0rem; }
+}
+
+
+.inputUi {
+  width: 1em;
+  margin: 5px 0px;
+  margin-left: 0px;
+  height: 1em;
+  position: initial;
+  box-sizing: border-box;
+  /* position: absolute; */
+  /* left: 1px; */
+  /* top: 2px; */
+  padding: 1px;
+
+}
+p{
+  background-color: inherit;
+  font-weight: 500;
+  
+}
+
+button:hover{
+  background-color: #595bd4;
+  /* background-color: #9596bb; */
+  color: white;
+}

@@ -1,0 +1,36 @@
+.main{
+    width: 100vw;
+    height: 100vh;
+    background-color: #f3f3f3;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-areas:
+        'navbar menu'
+        'navbar res'
+        'navbar res';
+    grid-template-rows: 3em 1fr;
+    grid-template-columns: 5em 1fr;
+}
+.nav{
+    grid-area: navbar;
+}
+.head{
+    grid-area: menu;
+    display: flex;
+    justify-content: right;
+    text-align: center;
+    align-items: center;
+}
+.pages{
+    grid-area: res;
+    /* display: inline-block;
+    border: 5px solid black;
+    width: 100px;
+    height: 100px; */
+}
+
+.loadForHome{
+    width: 100vw;
+    height: 100vh;
+    /* background-color: aqua; */
+}

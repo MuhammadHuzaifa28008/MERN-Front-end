@@ -1,0 +1,21 @@
+
+
+.apis{
+    align-items: center;
+    height: 90%;
+    margin-bottom: 0px;
+    box-sizing: border-box;
+    /* border: 5px solid rgb(1, 1, 117); */
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 1px 1px;
+    /* grid-template-columns: 11em 11em 11em 11em 11em 11em; */
+    /* grid-template-rows: auto; */
+    /* grid-gap: 5px; */
+    margin: 1em auto;
+    margin-bottom: 0em;
+    justify-content: center;
+    overflow: auto;
+
+}

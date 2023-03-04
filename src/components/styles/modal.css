@@ -1,0 +1,33 @@
+.modalContainer {
+    position: absolute; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    /* overflow: auto; Enable scroll if needed */
+    /* background-color: rgb(0, 0, 0); Fallback color */
+    background-color: rgba(114, 106, 106, 0.719); /* Black w/ opacity */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* pointer-events: none; */
+  }
+  .modalCard{
+    box-sizing: border-box;
+    /* background-color: blue; */
+    /* border: 5px solid black; */
+    width: 20em;
+    height: 15em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 5em;
+    border-radius: 1em;
+    align-items: center;
+    z-index: 10;
+
+
+    /* z-index: 2; */
+  }  

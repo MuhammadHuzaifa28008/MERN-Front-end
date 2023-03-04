@@ -1,0 +1,141 @@
+.apiCard {
+  position: relative;
+  box-sizing: border-box;
+  margin: 1em;
+  padding: 10px 0px;
+  width: 12em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: space-between; */
+  text-align: center;
+  border-radius: 1em;
+  height: 11em;
+  background-color: white;
+  border: none;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
+  /* box-shadow: 0px 13px 10px -7px rgb(0 0 0 / 10%); */
+  box-shadow: 5px 5px 5px 5px #dbdbdb;
+  background-color: white;
+}
+
+.apiCard:hover {
+  /* cursor:pointer; */
+  box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
+  transform: scale(1.05, 1.05);
+}
+.apiCard:hover #y {
+  display: flex;
+}
+
+.apiLogo {
+  width: 50%;
+  height: 30%;
+  box-sizing: border-box;
+  background-color: white;
+  background-color: white;
+}
+
+.apiLogo img {
+  width: 30%;
+  margin: 0px auto;
+  border-radius: 2px;
+  background-color: white;
+}
+.txtSec {
+  width: 100%;
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  background-color: white;
+  box-sizing: border-box;
+}
+.txtSec p {
+  /* font-size: 1.5em; */
+  font-weight: bold;
+  background-color: inherit;
+  background-color: white;
+}
+
+.txtSec span {
+  /* font-size: 12px; */
+  font-weight: 200;
+  background-color: inherit;
+  background-color: white;
+}
+
+.apiActions {
+  display: none;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  align-items: center;
+  justify-content: space-evenly;
+  letter-spacing: 1px;
+  width: 100%;
+  height: 70%;
+  background: #595bd40f;
+  padding: 5px;
+  box-sizing: border-box;
+  border-radius: 1em 0em;
+}
+
+.apiActions div {
+  display: flex;
+  width: 2em;
+  background: transparent;
+  align-items: center;
+  border-radius: 1em;
+  box-sizing: border-box;
+  height: 2em;
+  padding: 2px;
+}
+
+.apiActions div:hover {
+  cursor: pointer;
+  border-radius: 1em;
+  background-color: #595bd4;
+  padding: 5px;
+}
+
+.apiActions div:hover img {
+  filter: invert(100);
+  background-color: #a6a42b;
+  border: none;
+}
+.apiActions div:hover .deleteIcon {
+  /* filter: invert(100); */
+  color: black;
+  background: red;
+  border-radius: 1em;
+  border: none;
+}
+
+.copiedDiv {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  box-sizing: border-box;
+  padding: 5px;
+  /* width: 10px;
+    height: 10px; */
+  border-radius: 1em;
+  /* border: 2px solid red; */
+}
+
+.copiedDiv span {
+  border: 1px solid black;
+}
+
+.deleteIcon {
+    color: white;
+  height: 100%;
+  background: red;
+  border-radius: 1em;
+  width: 100%;
+  /* border: 1px solid black; */
+}
+
