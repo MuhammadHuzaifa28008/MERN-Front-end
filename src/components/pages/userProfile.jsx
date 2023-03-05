@@ -41,8 +41,8 @@ export default function UserProfile() {
     if (user.loggedIn) {
       // console.log("user");
       // console.log(user);
-    document.title = `Apis Hub | ${user.userData.userName}`;
-      
+      document.title = `Apis Hub | ${user.userData.userName}`;
+
 
       setUserName(user.userData.userName);
       setUserEmail(user.userData.userEmail);
@@ -68,13 +68,13 @@ export default function UserProfile() {
     }
   }, [changeName, changeEmail, changePass]);
 
-useEffect(() =>{
-  if (user.loggedIn) {
-    // console.log("user");
-    // console.log(user);
-    document.title = `Apis Hub | ${user.userData.userName}`;
-  }
-},[userName])
+  useEffect(() => {
+    if (user.loggedIn) {
+      // console.log("user");
+      // console.log(user);
+      document.title = `Apis Hub | ${user.userData.userName}`;
+    }
+  }, [userName])
 
   const handleOnCancelUpdate = () => {
     if (changeName) {
@@ -150,7 +150,7 @@ useEffect(() =>{
 
 
       try {
-        const res = await axios.patch(
+        const res = await axios.patch(process.env.REACT_APP_BaseURL +
           `/user/update/${user.userData.userId}`,
           {
             newEmail: emailRef.current.innerText.toLowerCase(),
@@ -168,17 +168,17 @@ useEffect(() =>{
           setUserName(user.userData.userName);
           setUserEmail(user.userData.userEmail);
           handleOnCancelUpdate();
-        }else{
+        } else {
           console.log(res.data)
           // setErrors(res.data.errors);
           errors = res.data.errors;
 
-          if(errors.oldPassword){
+          if (errors.oldPassword) {
             oldPass.current.className = "error";
             oldPass.current.value = null;
             oldPass.current.placeholder = `${errors.oldPassword}`;
           }
-          if(errors.newPassword){
+          if (errors.newPassword) {
             newPass.current.className = "error";
             newPass.current.value = '';
             newPass.current.placeholder = `${errors.newPassword}`;
@@ -225,7 +225,7 @@ useEffect(() =>{
                     // setUserName(user.userData.userName);
                     nameRef.current.innerText = userName;
                     nameRef.current.contentEditable = false;
-                    if(errors.userName){
+                    if (errors.userName) {
                       delete errors.userName;
                     }
                     setChangeName(false);
@@ -266,7 +266,7 @@ useEffect(() =>{
                     // setUserEmail(user.userData.userEmail);
                     emailRef.current.innerText = userEmail;
                     emailRef.current.contentEditable = false;
-                    if(errors.userEmail){
+                    if (errors.userEmail) {
                       delete errors.userEmail;
                     }
                     setChangeEmail(false);
@@ -314,10 +314,10 @@ useEffect(() =>{
                           oldPass.current.className = "inputsLabel";
                           oldPass.current.placeholder =
                             "Enter  your old Pssword";
-                            // console.log(oldPassword);
-                            if(errors.oldPassword){
-                              delete errors.oldPassword
-                            }
+                          // console.log(oldPassword);
+                          if (errors.oldPassword) {
+                            delete errors.oldPassword
+                          }
                         }}
                       />
                     </label>
@@ -338,9 +338,9 @@ useEffect(() =>{
                           newPass.current.className = "inputsLabel";
                           newPass.current.placeholder =
                             "Enter  your New Pssword";
-                            if(errors.newPassword){
-                              delete errors.newPassword
-                            }
+                          if (errors.newPassword) {
+                            delete errors.newPassword
+                          }
                         }}
                       />
                     </label>
@@ -352,13 +352,13 @@ useEffect(() =>{
                       // console.log("candel clicked for userPassword");
                       oldPass.current.className = "inputsLabel";
                       setOldPassword(null);
-                      if(errors.oldPassword){
+                      if (errors.oldPassword) {
                         delete errors.oldPassword;
                       }
                       newPass.current.className = "inputsLabel";
                       setNewPassword(null);
                       setChangePass(false);
-                      if(errors.newPassword){
+                      if (errors.newPassword) {
                         delete errors.newPassword;
                       }
                     }}

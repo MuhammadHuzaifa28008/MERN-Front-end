@@ -37,7 +37,7 @@ export default function SignUp() {
 
     if (Object.keys(errors).length === 0) {
       await axios
-        .post("/user/signup", {
+        .post(process.env.REACT_APP_BaseURL + "/user/signup", {
           email: userEmail,
           name: userName,
           password: password,

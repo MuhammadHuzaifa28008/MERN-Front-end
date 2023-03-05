@@ -91,7 +91,7 @@ export default function ApiCard(props) {
           },
         };
         axios
-          .post(
+          .post(process.env.REACT_APP_BaseURL +
             `/free-apis/add/${user.userData.userId}?link=${api.Link}`,
             {},
             axiosConfig
@@ -138,11 +138,11 @@ export default function ApiCard(props) {
       if (user.loggedIn === true) {
         // console.log("apiCard.jsx \n handle Delete\n user.loggedIn -> true")
         axios
-            .delete(
-              `/free-apis/delete/${user.userData.userId}?link=${api.Link}`,{
-                headers: { token: token },
-              }
-            )
+          .delete(process.env.REACT_APP_BaseURL+
+            `/free-apis/delete/${user.userData.userId}?link=${api.Link}`, {
+            headers: { token: token },
+          }
+          )
           .then((res) => {
             // console.log("apiCard.jsx \n handle Delete\n res ->" + res.data.message);
             if (!res.data.success) {
@@ -184,13 +184,13 @@ export default function ApiCard(props) {
 
         <div id="y" className="apiActions">
           <div onClick={handleCopy}>
-            {!isCopied && <img title = "copy" src={copyImg} alt="copy" />}
-            {isCopied && <img title = "copied" src={addImg} alt="copied" />}
+            {!isCopied && <img title="copy" src={copyImg} alt="copy" />}
+            {isCopied && <img title="copied" src={addImg} alt="copied" />}
           </div>
           {!isAlreadyAddedComp && (
             <div onClick={handleAddToList}>
-              {!isAdded && <img title = "add to list" src={addImg} alt="add" />}
-              {isAdded && <img title = "added to list" src={copyImg} alt="add" />}
+              {!isAdded && <img title="add to list" src={addImg} alt="add" />}
+              {isAdded && <img title="added to list" src={copyImg} alt="add" />}
             </div>
           )}
           {isAlreadyAddedComp && (

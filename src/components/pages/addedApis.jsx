@@ -20,7 +20,7 @@ const AddedApis = () => {
     document.title = "Apis Hub | Added APIs";
     const fetchUrls = async (token) => {
       try {
-        const res = await axios.get(
+        const res = await axios.get(process.env.REACT_APP_BaseURL +
           `/free-apis/addedapis/${user.userData.userId}`,
           {
             headers: { token: token },
@@ -118,18 +118,17 @@ const AddedApis = () => {
 
   return (
     <>
-      <React.StrictMode>
-        {addedApis.length > 0 ? (
-          <>
-            <h1
-              style={{
-                display: "inline",
-              }}
-              className="blue"
-            >
-              Added Apis [ {addedApis.length} ]
-            </h1>
-            {/* <h6
+      {addedApis.length > 0 ? (
+        <>
+          <h1
+            style={{
+              display: "inline",
+            }}
+            className="blue"
+          >
+            Added Apis [ {addedApis.length} ]
+          </h1>
+          {/* <h6
               style={{
                 color: "#ff5656",
                 display: "inline",
@@ -165,37 +164,36 @@ const AddedApis = () => {
               </span>
               are being rendered.
             </h6> */}
-            <div className="apis">{addedApis.map(mapAddedApis)}</div>
+          <div className="apis">{addedApis.map(mapAddedApis)}</div>
+          {isVisible && (
+            <div>
+              <Modal
+                redirect={true}
+                isAlready={false}
+                message={"message here"}
+                closeModal={setIsVisible}
+              />
+            </div>
+          )}
+        </>
+      ) : (
+        <>
+          <h1 className="blue">Added Apis will be displayed here !</h1>
+
+          <div className="apis">
             {isVisible && (
               <div>
                 <Modal
                   redirect={true}
                   isAlready={false}
-                  message={"message here"}
+                  message={"Need To Login First"}
                   closeModal={setIsVisible}
                 />
               </div>
             )}
-          </>
-        ) : (
-          <>
-            <h1 className="blue">Added Apis will be displayed here !</h1>
-
-            <div className="apis">
-              {isVisible && (
-                <div>
-                  <Modal
-                    redirect={true}
-                    isAlready={false}
-                    message={"Need To Login First"}
-                    closeModal={setIsVisible}
-                  />
-                </div>
-              )}
-            </div>
-          </>
-        )}
-      </React.StrictMode>
+          </div>
+        </>
+      )}
     </>
   );
 };

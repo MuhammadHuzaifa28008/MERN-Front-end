@@ -8,7 +8,7 @@ const DeleteProfileModal = ({ closeModal }) => {
   const navigate = useNavigate();
   const { user } = useContext(UserContext);
 
-  useEffect(() => {}, []);
+  useEffect(() => { }, []);
 
   return (
     <div
@@ -38,7 +38,7 @@ const DeleteProfileModal = ({ closeModal }) => {
           onClick={async () => {
             const token = localStorage.getItem("token");
             await axios
-              .delete(`/user/delete/${user.userData.userId}`, {
+              .delete(process.env.REACT_APP_BaseURL + `/user/delete/${user.userData.userId}`, {
                 headers: { token: token },
               })
               .then((res) => {

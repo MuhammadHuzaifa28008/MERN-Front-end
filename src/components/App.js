@@ -50,7 +50,7 @@ export default function App() {
             token: token,
           },
         };
-        const res = await axios.get("/user/isUserAuth", axiosConfig);
+        const res = await axios.get(process.env.REACT_APP_BaseURL+"/user/isUserAuth", axiosConfig);
         if (res.data.success === true) {
           // console.log("App.js \n user already loggedIn");
           user.userData = userAlready;
@@ -66,7 +66,7 @@ export default function App() {
     };
 
     async function fetchData() {
-      const response = await axios.get("/free-apis/");
+      const response = await axios.get(process.env.REACT_APP_BaseURL+"/free-apis/");
       setApiRes(response.data.response);
     }
 
