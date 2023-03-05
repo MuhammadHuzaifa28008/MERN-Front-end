@@ -9,12 +9,11 @@ document.title = "Loading ..."
 },[])
 
 return(<>
-<div className="loadImg">
-    {/* <img src={loadImg} alt= "we regret !" /> */}
-
+<div className="loadMsgContainer">
+    <p className="blue">server might be Sleeping 😴😴 | Gurbat cheekh cheekh k bol rhi hey 😭😭</p>
+<p className="blue">This might Take  __ mins 🙄🙄 | Please have some coffee ☕☕</p>
 </div>
     <div className ="load"></div>
-    {/* <h1>LOADING...</h1> */}
 </>
 )
 }

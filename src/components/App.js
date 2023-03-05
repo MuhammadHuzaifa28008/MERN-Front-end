@@ -23,7 +23,7 @@ export default function App() {
 
   // const token = localStorage.getItem("token");
   
-  const [apiRes, setApiRes] = useState(null);
+  const [apiRes, setApiRes] = useState({});
   // let [user, setUser] = useState({});
   const [user] = useState({ loggedIn: false });
   
@@ -67,18 +67,25 @@ export default function App() {
 
     async function fetchData() {
       const response = await axios.get(process.env.REACT_APP_BaseURL+"/free-apis/");
-      setApiRes(response.data.response);
+      if(Object.keys(response.data.response).length === 0 ){
+        setTimeout(fetchData,10000)
+      }else{
+        setApiRes(response.data.response);
+      }
     }
-
+// 
     isUserAuth();
-    fetchData();
+    // do{
+      fetchData();
+    // }
+    // while(apiRes === null || apiRes === {})
   }, []);
   // useEffect(()=>{
 
   // },[title])
 
   const homeHandle = () => {
-    if (apiRes === null) {
+    if (Object.keys(apiRes).length === 0) {
       return (
         <div className="loadForHome">
           <Loading />
