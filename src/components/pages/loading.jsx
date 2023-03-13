@@ -14,8 +14,8 @@ export default function Loading() {
     return (<>
         {isVisible && <>
             <div className="loadMsgContainer">
-                <p className="blue">Server might be Sleeping 😴😴 | Gurbat cheekh cheekh k bol rhi hey 😭😭</p>
-                <p className="blue">This might Take more 10-20  secs 🙄🙄 | Please have some coffee ☕☕</p>
+                <h1 className="blue">Server might be Sleeping 😴😴 | Gurbat cheekh cheekh k bol rhi hey 😭😭</h1>
+                <h1 className="blue">This might Take more 5 secs 🙄🙄 | Please have some coffee ☕☕</h1>
             </div>
             </>
             }

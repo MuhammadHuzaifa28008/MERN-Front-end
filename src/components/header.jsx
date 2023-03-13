@@ -30,7 +30,7 @@ export default function Header() {
 
   return (
     <>
-      {viewMsg && (
+      {/* {viewMsg && (
         <>
           <h6
             style={{
@@ -57,7 +57,7 @@ export default function Header() {
             Time constraint | Under Graduate STUDENT 🙂
           </h6>
         </>
-      )}
+      )} */}
       <ul>
         {/* {!user.loggedIn && ( */}
         {!isIn && (
