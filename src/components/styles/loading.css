@@ -21,7 +21,6 @@ margin: 0px;
     border:3px solid rgb(255, 255, 255);
     border-radius: 50%;
     border-top:5px solid #595bd4;
-    ;
     width: 5em;
     height: 5em;
     -webkit-animation: spin 1s linear infinite; /* Safari */
@@ -53,3 +52,20 @@ margin: 0px;
     font-size:2em;
     font-weight: bolder;
   }
+
+
+
+  
+@media only screen and (min-width: 321px) and (max-width: 480px) {
+
+  .loadMsgContainer{
+    height: 100vh;
+    padding: 0.2em;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size:0.5em;
+    font-weight: bolder;
+  }
+
+}

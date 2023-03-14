@@ -1,6 +1,8 @@
 .main{
     width: 100vw;
     height: 100vh;
+    box-sizing: border-box;
+    /* padding: 0.2em; */
     background-color: #f3f3f3;
     display: grid;
     grid-gap: 1rem;
@@ -75,8 +77,12 @@
 
 
     .main{
+        /* height: 100vh;
+        width: 100vw;
+        box-sizing: border-box;
+        padding: 0.3em; */
         /* border: 1px solid red; */
-    grid-gap: 1rem;
+    grid-gap: 0.5rem;
     grid-template-areas:
         'menu'
         'res'
@@ -95,6 +101,8 @@
 }
 .head{
     /* border:  1px solid red; */
+    /* border: 2px solid red; */
+    height: 3em;
 }
 .nav{
     /* border:  1px solid red; */
