@@ -14,9 +14,24 @@ export default function Loading() {
     return (<>
         {isVisible && <>
 {/*             <div className="loadMsgContainer"> */}
-                <h1 className="blue">Server was deployed on [https://adaptable.io] </h1>
-                <h3 className="blue">Free tier has expired so 😭😭 no application demo till i figure out next free hosting service </h3>
-                 <h6 className="blue">VISIT my github [https://github.com/MuhammadHuzaifa28008]</h6>
+                <div style={{ textAlign: 'center', padding: '20px' }}>
+  <h1 style={{ color: 'blue', marginBottom: '10px' }}>
+    Server was deployed on 
+    <a href="https://adaptable.io" target="_blank" rel="noopener noreferrer" style={{ color: 'blue', textDecoration: 'none', marginLeft: '5px' }}>
+      Adaptable.io
+    </a>
+  </h1>
+  <h3 style={{ color: 'blue', marginBottom: '20px' }}>
+    Free tier has expired so 😭😭 no application demo till I figure out the next free hosting service
+  </h3>
+  <h6 style={{ color: 'blue' }}>
+    VISIT my GitHub 
+    <a href="https://github.com/MuhammadHuzaifa28008" target="_blank" rel="noopener noreferrer" style={{ color: 'blue', textDecoration: 'underline', marginLeft: '5px' }}>
+      here
+    </a>
+  </h6>
+</div>
+
 {/*             
 
                     </div> */}
