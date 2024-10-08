@@ -14,9 +14,12 @@ export default function Loading() {
     return (<>
         {isVisible && <>
 {/*             <div className="loadMsgContainer"> */}
-                <h1 className="blue">Server might be Sleeping 😴😴 | Gurbat cheekh cheekh kr bol rhi hey 😭😭</h1>
-                <h1 className="blue">This might Take more 5 secs 🙄🙄 | Please have some coffee ☕☕</h1>
-{/*             </div> */}
+                <h1 className="blue">Server was deployed on [https://adaptable.io] </h1>
+                <h3 className="blue">Free tier has expired so 😭😭 no application demo till i figure out next free hosting service </h3>
+                 <h6 className="blue">VISIT my github [https://github.com/MuhammadHuzaifa28008]</h6>
+{/*             
+
+                    </div> */}
             </>
             }
         <div className="load"></div>
